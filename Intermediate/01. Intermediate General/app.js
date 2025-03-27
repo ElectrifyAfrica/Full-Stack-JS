@@ -337,6 +337,7 @@ console.log(s);
 console.log(singer)
 */
 
+/*
 const data = {
   user: {
     id: 123,
@@ -408,3 +409,5 @@ console.log(`Email Notifications: ${emailNotifications}`);
 console.log(`SMS Notifications: ${smsNotifications}`);
 console.log(`Push Notifications: ${pushNotifications}`);
 console.log(`Language: ${language}`);
+*/
+
