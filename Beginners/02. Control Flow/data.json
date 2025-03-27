@@ -1,0 +1,12 @@
+{
+  "name": "Oseyemen Daniel",
+  "age": 20,
+  "email": "danielose2009@yahoo.com",
+  "isSubscribed": true,
+  "hobbies": ["Reading", "Running", "Cooking"],
+  "address": {
+    "province": "Ontario",
+    "city": "Vaughan"
+  }
+
+}
