@@ -233,3 +233,193 @@ console.log(everyRes);
 console.log(someRes);
 console.log(everyRes1);
 */
+
+//****Reducer method ****
+
+// The "reducer" method executes a reducer function for array element.
+// The "reducer" method returns a single value: the function's accumulated result.
+// The "reducer" method does not execute the function for empty array elements.
+// The "reducer" method does not change the original array.
+
+// array.reducer(function(total, currentValue, currentIndex, arr), initialValue)
+
+// ------------------------------------
+// Example 1
+/*
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce((p, c) => {
+	console.log(`Previous: ${p}`);
+	console.log(`Current: ${c}`);
+	return p + c;
+}, 0);
+
+//   // reduce function will run for every item in the array, basically this is what's gonna happen
+//   // 0 + 1 => 1
+//   // 1 + 2 => 3
+//   // 3 + 3 => 6
+//   // 6 + 4 => 10
+//   // 10 + 5 => 15
+
+console.log(sum);
+*/
+
+/*
+const people = [
+  {
+    name: "HuXn WebDev",
+    age: 18,
+  },
+  {
+    name: "Alex Mead",
+    age: 29,
+  },
+  {
+    name: "Brain Griffin",
+    age: 40,
+  },
+	{
+    name: "Brain Musk",
+    age: 37,
+  },
+];
+
+const oldestAge = people.reduce((p,c) => (c.age > p ? c.age : p), 0);
+console.log(oldestAge);
+*/
+
+/*
+//Example 3
+const words = [
+  "apple",
+  "banana",
+  "orange",
+  "banana",
+  "apple",
+  "orange",
+  "apple",
+  "grape",
+];
+
+const wordFrequency = words.reduce((frequencyMap, word) => {
+	frequencyMap[word] = (frequencyMap[word] || 0) + 1;
+	return frequencyMap;
+}, {});
+
+console.log(wordFrequency);
+*/
+
+/*
+const map = new Map();
+
+const keyOne = "Danny";
+const keyTwo = {};
+const keyThree = function() {};
+
+map.set(keyOne, "Value of key one");
+map.set(keyTwo, "value of key two");
+map.set(keyThree, "value of key three");
+*/
+// console.log(map.keys());
+// console.log(map.values());
+// console.log(map.delete(keyTwo));
+// console.log(map.size);
+
+// console.log(map);
+
+/*
+for (let [key, value] of map) {
+	console.log(`${key} -- ${value}`);
+}
+*/ 
+
+/*
+for (let key of map.keys()) {
+	console.log(key);
+}
+*/
+/*
+for (let value of map.values()) {
+	console.log(value);
+}
+*/
+
+
+// -------------------------------------------------
+// Set is a built-in data structure introduced in (ES6) that represents a collection of unique values. Unlike arrays, Set allows you to store only unique values, which means duplicate values are automatically removed. Each value can occur only once within a Set.
+
+// Set objects are useful when you need to store a list of unique elements and quickly check for the existence of a specific value.
+
+/*
+const initialValues = [1, 2, 2, 4, 5, 5, 3];
+const mySet1 = new Set(initialValues) 
+console.log(mySet1);
+
+const mySet = new Set();
+
+mySet.add("apple");
+mySet.add("bananna");
+mySet.add("orange");
+mySet.add("pineapple");
+mySet.add("apple");
+
+
+console.log(mySet);
+console.log(mySet.has("bananna"));
+
+mySet.delete("bananna");
+
+console.log(mySet);
+
+mySet.delete("apple");
+
+console.log(mySet);
+
+mySet.clear();
+
+console.log(mySet);
+
+
+// 2nd example
+
+const mySet2 = new Set();
+
+mySet2.add("apple");
+mySet2.add("bananna");
+mySet2.add("orange");
+mySet2.add("pineapple");
+mySet2.add("apple");
+
+for (let item of mySet) {
+	console.log(item);
+}
+
+*/
+
+const set = new Set();
+
+set.add();
+set.add("string");
+
+set.add({ name: "huxn" });  //wrong way to add an object if it is going to be referenced
+
+const obj = { name: "Daniel" }; // Create the object once
+set.add(obj); // Add the reference to the Set
+
+set.add(10);
+
+console.log(set.size);
+console.log(set.keys());
+console.log(set.has({ name: "huxn" })); // FALSE — new object with same content but different reference
+
+console.log(set.has(obj)); // TRUE — because it's the same reference
+
+
+set.delete(10);
+console.log(set);
+
+// Iterating over sets.
+for (let item of set) {
+  console.log(item);
+}
+
