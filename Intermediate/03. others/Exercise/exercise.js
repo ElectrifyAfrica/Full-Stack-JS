@@ -351,6 +351,143 @@ console.log(map1.size);
 */
 
 // 1. Create a Set name (letters)
-// 2. Add ("a", "b", "c") as properties
-// 3. Add ("a", "b", "c") as values
-// 4. Iterate over Set & log the values.
+// 2. Add ("a", "b", "c") as values
+// 3. Iterate over Set & log the values.
+
+/*
+const letters = new Set();
+
+letters.add("a");
+letters.add("b");
+letters.add("c");
+
+console.log(letters.size);
+console.log(letters);
+
+for (let letter of letters) {
+	console.log(letter);
+}	
+*/
+
+/*
+const foo = Symbol();
+console.log(typeof foo);
+
+const obj = {};
+obj[foo] = "Value";
+
+
+console.log(obj);
+console.log(obj[foo]);
+*/
+
+/*
+// 1. Create a symbol provide a value of "foo"
+// 2. Check the type of that symbol.
+// 3. Create empty object
+// 4. Store symbol as the property to that object.
+// 5. Iterate over Symbol.
+
+const sym = Symbol();
+console.log(typeof sym);
+
+const obj = {};
+obj[Symbol("foo")] = "some value for foo";
+console.log(obj);
+
+
+for (let i in obj) {
+	console.log(i);
+}
+*/
+
+
+/*
+const sym = Symbol();
+console.log(typeof sym);
+
+const obj = {
+	firstName: "Daniel",
+	lastName: "Tobi",
+	middlename: "John"
+};
+obj[Symbol("foo")] = "some value for foo";
+console.log(obj);
+
+
+for (let i in obj) {
+	console.log(i);
+}
+
+*/
+
+/*
+// 1. Create a symbol with a value of "foo"
+const mySymbol = Symbol("foo");
+
+// 2. Check the type of that symbol
+console.log(typeof mySymbol); // Output: "symbol"
+
+// 3. Create an empty object
+const obj = {};
+
+// 4. Store symbol as the property to that object
+obj[mySymbol] = "This is a symbol value";
+
+// 5. Iterate over the symbol keys in the object
+const symbolKeys = Object.getOwnPropertySymbols(obj);
+
+for (const sym of symbolKeys) {
+  console.log(`Key: ${sym.toString()}, Value: ${obj[sym]}`);
+}
+*/
+
+
+/*
+// 1. Create a symbol with a value of "foo"
+const mySymbol = Symbol("foo");
+
+// 2. Check the type of that symbol
+console.log(typeof mySymbol); // "symbol"
+
+// 3. Create a non-empty object
+const obj = {
+  name: "Alice",
+  age: 30
+};
+
+// 4. Store symbol as the property to that object
+obj[mySymbol] = "Secret value";
+
+// 5. Iterate over Symbol keys in the object
+const symbolKeys = Object.getOwnPropertySymbols(obj);
+
+for (const sym of symbolKeys) {
+  console.log(`Key: ${sym.toString()}, Value: ${obj[sym]}`);
+}
+*/
+
+/*
+// 1. Create a symbol with a value of "foo"
+const mySymbol = Symbol("foo");
+
+// 2. Check the type of that symbol
+console.log(typeof mySymbol); // "symbol"
+
+// 3. Create an object
+const obj = {};
+
+// 4. Store symbol as the property to that object
+obj[mySymbol] = "Symbol value";
+
+// 5. Iterate over Symbol (symbol *keys* in the object)
+const symbolKeys = Object.getOwnPropertySymbols(obj);
+
+for (const sym of symbolKeys) {
+  console.log(`Key: ${sym.toString()}, Value: ${obj[sym]}`);
+}
+*/
+
+
+
+

@@ -396,6 +396,7 @@ for (let item of mySet) {
 
 */
 
+/*
 const set = new Set();
 
 set.add();
@@ -422,4 +423,83 @@ console.log(set);
 for (let item of set) {
   console.log(item);
 }
+*/
+
+// Symbol is a unique and immutable primitive data type introduced in ECMAScript 6 (ES6). A symbol is often used as an identifier for object properties to avoid potential naming conflicts.
+
+// Unlike strings or numbers, symbols are guaranteed to be unique. When you create a symbol, it is unique and cannot be recreated or changed. This uniqueness ensures that symbols will not collide with other property names, even if they have the same string representation.
+
+/*
+const mySymbol = Symbol();
+console.log(typeof mySymbol);
+*/
+/*
+const mySymbol = Symbol("My custom Symbol");
+console.log(mySymbol);
+*/
+
+/*
+const mySymbol1 = Symbol("name");
+const mySymbol2 = Symbol("name");
+
+const obj = {};
+obj[mySymbol1] = "Value 1";
+obj[mySymbol2] = "Value 2";
+
+console.log(obj);
+console.log(obj[mySymbol1]);
+console.log(obj[mySymbol2]);
+*/
+/*
+const symbol1 = Symbol("name");
+const symbol2 = Symbol("name");
+
+const Daniel = {}
+Daniel.age = 19
+Daniel['gender'] = "male";
+Daniel['gender'] = "female";
+Daniel[symbol1] = "alex";
+Daniel[symbol2] = "john";
+console.log(Daniel);
+*/
+
+/*
+const id = Symbol("id");
+
+const user = {
+  name: "Alice",
+  [id]: 123
+};
+
+console.log(user[id]); // 123
+console.log(Object.keys(user)); // ["name"] — doesn't include symbol keys
+*/
+
+
+
+//If you want to get symbol keys, use: 
+// Object.getOwnPropertySymbols(user);
+
+/*
+const id = Symbol("id");
+
+const user = {
+  name: "Alice",
+  [id]: 123
+};
+
+console.log(Object.keys(user)); // ["name"]
+console.log(Object.getOwnPropertySymbols(user)); // [ Symbol(id) ]
+
+// Want both string and symbol keys?
+// Use Reflect.ownKeys()
+
+console.log(Reflect.ownKeys(user)); // ["name", Symbol(id)]
+*/
+
+
+
+
+
+
 
