@@ -15,7 +15,7 @@ console.log(greenDiv);
 const blue = document.getElementById("blue");
 console.log(blue);
 
-// 4. Select div which has the class & Id of "yello" by using querySelector()
+// 4. Select div which has the class & Id of "yellow" by using querySelector()
 const yellowClass = document.querySelector(".yellow");
 console.log(yellowClass);
 
