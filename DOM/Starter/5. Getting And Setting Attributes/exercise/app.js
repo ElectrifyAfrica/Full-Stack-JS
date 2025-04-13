@@ -11,4 +11,4 @@ const secondAnchor = document.querySelector(".a-two");
 
 secondAnchor.setAttribute("href", "https://www.youtube.com/@electrifyafrica")
 
-console.log(secondAnchor.getAttribute("href"));
+console.log("second Anchor:", secondAnchor.getAttribute("href"));
